@@ -48,11 +48,11 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "#0b0f17" },
     { media: "(prefers-color-scheme: light)", color: "#f6f7fb" },
   ],
-  colorScheme: "dark light",
+  colorScheme: "light dark",
 };
 
-// Runs before first paint: applies saved theme (default dark) and enables reveal animations.
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}document.documentElement.classList.add('js');})();`;
+// Runs before first paint: applies saved theme (default light) and enables reveal animations.
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}document.documentElement.classList.add('js');})();`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -73,7 +73,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="en" data-theme="light" suppressHydrationWarning className={`${inter.variable} ${jetbrains.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

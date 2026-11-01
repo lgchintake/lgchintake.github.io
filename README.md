@@ -75,7 +75,7 @@ scripts/generate-images.mjs  ← regenerates og-image.png + PNG icons (npm run i
 
 ## Features
 
-- Dark theme by default, with a light/dark toggle that is saved in `localStorage` and applied before first paint, so there is no flash.
+- Light theme by default, with a light/dark toggle that is saved in `localStorage` and applied before first paint, so there is no flash.
 - Mobile-first responsive layout, semantic HTML, a skip link, visible focus rings, AA contrast, and support for reduced motion.
 - SEO: meta tags, Open Graph and Twitter cards, JSON-LD `Person` data, `sitemap.xml`, `robots.txt` and a favicon.
 - Lighthouse on a local build: Performance 94 on mobile and 100 on desktop; Accessibility, Best Practices and SEO 100 on both.
