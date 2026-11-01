@@ -41,15 +41,15 @@ Search the file for `TODO` to find items that need confirming because the CV doe
 
 ## Deploy to GitHub Pages
 
-The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs `npm ci` and then `npm run build`, and deploys the **`out`** folder on every push to `main`.
+The workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs `npm ci` and then `npm run build`, and deploys the **`out`** folder on every push to `master`.
 
 1. Create a GitHub repository named **`lgchintake.github.io`**.
-2. Push this project to its `main` branch:
+2. Push this project to its `master` branch:
    ```bash
    git init && git add . && git commit -m "Initial portfolio"
-   git branch -M main
+   git branch -M master
    git remote add origin https://github.com/lgchintake/lgchintake.github.io.git
-   git push -u origin main
+   git push -u origin master
    ```
 3. On GitHub, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
 4. Watch the **Actions** tab. When the run finishes, the site is live at https://lgchintake.github.io.
