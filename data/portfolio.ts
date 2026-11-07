@@ -153,7 +153,7 @@ export const portfolio: Portfolio = {
     photo: "/images/profile.jpg", // set to "" to use /images/profile-placeholder.svg
     photoPosition: "46% 30%",
     photoAlt: "Portrait of Laxminarayan Chintake",
-    availability: "Open to Technical Lead & Senior Backend / Blockchain roles", // TODO: adjust to your current availability
+    availability: "Open to Technical Lead & Senior Backend / Blockchain roles · India & UAE · Available within 30 days", // TODO: adjust to your current availability
   },
 
   resume: {
@@ -170,10 +170,16 @@ export const portfolio: Portfolio = {
       display: "aws.laxminarayan@gmail.com",
     },
     {
-      label: "Phone",
-      url: "tel:+919175324567",
+      label: "Phone (India)",
+      url: "https://wa.me/+919175324567",
       icon: "phone",
       display: "+91 91753 24567",
+    },
+    {
+      label: "Phone (UAE, WhatsApp)",
+      url: "https://wa.me/+971581121944",
+      icon: "phone",
+      display: "+971 58112 1944",
     },
     {
       label: "LinkedIn",
@@ -273,7 +279,7 @@ export const portfolio: Portfolio = {
       role: "Technical Lead",
       start: "Sep 2019",
       end: "Present",
-      location: "Pune, India", // TODO: add location (not stated in the CV)
+      location: "Pune, India · Open to relocate", // TODO: add location (not stated in the CV)
       summary:
         "Leading delivery of fintech card platforms built on Spring Boot microservices and event-driven architecture.",
       highlights: [
@@ -569,7 +575,7 @@ export const portfolio: Portfolio = {
     siteUrl: "https://lgchintake.github.io",
     title: "Laxminarayan Chintake — Technical Lead | Java Backend & Blockchain Engineer",
     description:
-      "Technical Lead with 11 years of experience in Java, Spring Boot, microservices, Kafka and blockchain (Solidity, Ethereum). Certified Blockchain Architect building secure, scalable fintech platforms.",
+      "Technical Lead with 11 years of experience in Java, Spring Boot, microservices, Kafka and blockchain (Solidity, Ethereum). Certified Blockchain Architect building secure, scalable fintech platforms. Open to roles in India and the UAE.",
     keywords: [
       "Laxminarayan Chintake",
       "Technical Lead",
