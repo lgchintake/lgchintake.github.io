@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { portfolio } from "@/data/portfolio";
-// Next.js processes global CSS imports; this side-effect import has no TS module declaration.
-// @ts-expect-error
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
