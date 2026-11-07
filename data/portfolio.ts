@@ -382,19 +382,18 @@ export const portfolio: Portfolio = {
     {
       title: "Bond Tokenization Platform",
       subtitle: "Blockchain · Capital Markets",
-      date: "Nov 2026", // TODO: confirm — CV lists "Nov 2026" (completion date? ongoing?)
+      date: "Jun 2026 – Present",
       domain: "Blockchain",
       summary:
-        "A blockchain-based platform enabling custodians to tokenize off-chain bonds on Ethereum and automate corporate actions such as coupon distribution — with investor whitelisting, secure token distribution, peer-to-peer trading and a real-time investor dashboard.",
+        "A blockchain-based bond tokenization platform that lets custodians tokenize off-chain bonds on Ethereum and automate corporate actions such as coupon distribution, with investor whitelisting, token distribution, peer-to-peer trading and an investor dashboard.",
       stack: [
         "Solidity",
         "Hardhat",
         "Web3",
         "Ethereum",
-        "ReactJS",
-        "Java",
-        "Spring Boot",
-        "Microservices",
+        "React",
+        "Java 21",
+        "Spring Boot 3.x",
         "Spring Data JPA",
         "Redis",
         "Kafka",
@@ -404,31 +403,27 @@ export const portfolio: Portfolio = {
       responsibilities: [
         {
           title: "Smart contracts",
-          text: "Designed and deployed secure Solidity contracts for bond tokenization, investor whitelisting and regulatory-compliant restricted transfers.",
+          text: "Wrote and deployed Solidity smart contracts for bond tokenization, investor whitelisting and restricted token transfers, tested with Hardhat.",
         },
         {
-          title: "Automation logic",
-          text: "Implemented automated coupon-distribution logic for accurate, scheduled payouts to token holders.",
+          title: "Coupon automation",
+          text: "Implemented scheduled coupon distribution to token holders.",
         },
         {
-          title: "Tooling & integration",
-          text: "Developed and tested contracts with Hardhat; integrated blockchain and backend services via Web3.",
+          title: "Blockchain integration",
+          text: "Integrated the smart contracts with Java backend services via Web3.",
         },
         {
           title: "Microservices",
-          text: "Built Spring Boot microservices with Spring Data JPA persistence and Redis caching for fast data retrieval.",
-        },
-        {
-          title: "Distributed config",
-          text: "Used Spring Cloud Config and service discovery for centralised configuration and efficient inter-service communication.",
+          text: "Built Spring Boot microservices with Spring Data JPA and Redis caching, using Spring Cloud Config and service discovery.",
         },
         {
           title: "Event-driven workflows",
-          text: "Orchestrated asynchronous workflows with Apache Kafka, including automated stakeholder notifications.",
+          text: "Used Kafka for event-driven workflows such as stakeholder notifications.",
         },
         {
           title: "Front end",
-          text: "Built a responsive ReactJS UI for custodians and investors to track portfolios and visualise holdings.",
+          text: "Built a React front end for portfolio tracking and holdings visualization.",
         },
       ],
       image: "/images/projects/bond-tokenization.svg",
@@ -438,42 +433,42 @@ export const portfolio: Portfolio = {
     {
       title: "Digital Modernization",
       subtitle: "Card Tokenization · Fintech",
-      date: "Oct 2026", // TODO: confirm date as listed in the CV
+      date: "Jan 2026 – Oct 2026",
       domain: "Fintech",
       summary:
-        "A high-scale Spring Boot microservices ecosystem powering a card tokenization platform. Led end-to-end design, development and testing of the Account Profile and Token Lookup services, integrated with downstream systems for secure data retrieval.",
+        "Spring Boot microservices for a card tokenization platform, including the Account Profile and Token Lookup services, integrated with downstream systems over Kafka.",
       stack: [
-        "Java",
+        "Java 17",
         "Spring Boot",
         "Microservices",
         "Kafka",
-        "JUnit",
+        "JUnit 5",
         "Mockito",
         "Cucumber",
         "Pitest",
         "Jenkins",
-        "Red Hat OpenShift",
+        "Red Hat OpenShift (OCP)",
       ],
       responsibilities: [
         {
           title: "Microservices",
-          text: "Engineered Spring Boot microservices managing account profiles and tokenized data interfaces.",
+          text: "Built Account Profile and Token Lookup microservices for secure retrieval and delivery of tokenized card data.",
         },
         {
           title: "Event-driven design",
-          text: "Implemented asynchronous communication with Apache Kafka for real-time data exchange across services.",
+          text: "Implemented Kafka-based asynchronous messaging for real-time data exchange between services.",
         },
         {
           title: "Testing",
-          text: "Built comprehensive unit-test suites with JUnit and Mockito, and Cucumber-based BDD API test automation.",
+          text: "Wrote unit tests with JUnit 5 and Mockito, API tests with Cucumber (BDD), and integration tests for end-to-end validation.",
         },
         {
           title: "Mutation testing",
-          text: "Improved test-suite efficacy through systematic mutation testing with Pitest.",
+          text: "Used Pitest mutation testing to find gaps in test coverage and strengthen assertions.",
         },
         {
           title: "Cloud & CI/CD",
-          text: "Deployed containerised services on Red Hat OpenShift and managed automated Jenkins pipelines.",
+          text: "Deployed containerized services to Red Hat OpenShift (OCP) and maintained Jenkins CI/CD pipelines.",
         },
       ],
       image: "/images/projects/digital-modernization.svg",
@@ -481,48 +476,106 @@ export const portfolio: Portfolio = {
       links: [],
     },
     {
+      title: "Certificate of Deposit Platform",
+      subtitle: "Blockchain · Tokenized Deposits",
+      date: "Aug 2025 – Dec 2025",
+      domain: "Blockchain",
+      summary:
+        "A blockchain-based Certificate of Deposit (CD) platform that lets issuers create tokenized CDs and lets users subscribe with eRupee, with maturity-time burn and on-chain events keeping off-chain records in sync. Treasury operations are governed by Safe (Gnosis) 3-of-5 multisig approval, with role-based access control, secrets management in HashiCorp Vault, and AI-assisted risk analysis for governance and treasury officers.",
+      stack: [
+        "Solidity",
+        "Hardhat",
+        "OpenZeppelin (UUPS)",
+        "Ethers.js v6",
+        "Safe (Gnosis) Protocol Kit & API Kit",
+        "Node.js",
+        "Express 5",
+        "TypeScript",
+        "MongoDB / Mongoose",
+        "HashiCorp Vault",
+        "Docker",
+        "OpenAI API",
+        "React 19",
+        "JWT",
+        "Ethereum Sepolia",
+      ],
+      responsibilities: [
+        {
+          title: "Tokenized CD contract",
+          text: "Built a tokenized Certificate of Deposit smart contract where users subscribe with eRupee through approve/transferFrom, plus issuer-side CD creation and burn on maturity. On-chain events keep the off-chain records in sync.",
+        },
+        {
+          title: "Multisig treasury governance",
+          text: "Put the treasury behind Safe (Gnosis) 3-of-5 multisig. The backend proposes mint transactions through Safe API Kit, collects signer confirmations, and executes automatically once quorum is reached.",
+        },
+        {
+          title: "TypeScript backend",
+          text: "Built a TypeScript/Express backend with about 50 REST endpoints across 13 feature modules (auth, wallet, conversion, transfers, CDs, multisig, alerts, notifications and others), backed by 18 Mongoose models in MongoDB.",
+        },
+        {
+          title: "Secrets & encryption",
+          text: "Moved all secrets (database URL, JWT secret, SMTP, API keys) into HashiCorp Vault running in Docker, and encrypted sensitive database fields such as wallet private keys with AES-256-GCM.",
+        },
+        {
+          title: "Auth & RBAC",
+          text: "Added JWT authentication with refresh tokens and RBAC for 7 roles (User, Admin, Governance, Treasury, Compliance, Security, Upgrade), recording every login attempt with the user's IP address.",
+        },
+        {
+          title: "AI risk analysis",
+          text: "Added an OpenAI-based risk analysis for governance and treasury officers that reviews transaction history, account age and behavior patterns, returning a structured 0–100 risk score, risk level, risk factors and points to consider — without ever making the approve/reject decision itself.",
+        },
+        {
+          title: "AI chatbot",
+          text: "Built an AI chatbot that uses tool calling to fetch a user's CD portfolio and the issuer's CD data live from the backend before it answers.",
+        },
+      ],
+      image: "/images/projects/certificate-of-deposit.svg",
+      imageAlt: "Abstract illustration of tokenized certificates of deposit governed by a 3-of-5 multisig",
+      links: [],
+    },
+    {
       title: "Debit Card Management System",
       subtitle: "Card Lifecycle · Fintech",
-      date: "Jan 2026", // TODO: confirm date as listed in the CV
+      date: "Sep 2019 – Aug 2025",
       domain: "Fintech",
       summary:
-        "A comprehensive platform for institutional onboarding and end-to-end debit-card lifecycle management — card generation, embossing-file creation, data maintenance, virtual-card support and high-volume batch processing.",
+        "A comprehensive platform for institutional onboarding and end-to-end debit card lifecycle management — card generation, embossing file creation, data maintenance, virtual card support and high-volume batch processing.",
       stack: [
-        "Java",
-        "Spring Boot",
+        "React 19",
+        "Java 17",
+        "Spring Boot 3.x",
         "Microservices",
         "Kafka",
         "Redis",
+        "Jenkins",
         "Spring Batch",
         "Event-Driven",
         "Oracle",
         "PostgreSQL",
         "Spring Data JPA",
-        "ReactJS",
-        "Jenkins",
         "Mockito",
         "Agile",
       ],
       responsibilities: [
         {
-          title: "Technical leadership",
-          text: "Served as Technical Lead, guiding the team through the SDLC and architectural decision-making.",
+          title: "Card lifecycle",
+          text: "Built the institutional onboarding module and end-to-end card lifecycle workflows (issuance, activation, blocking, replacement, renewal).",
         },
         {
-          title: "System development",
-          text: "Spearheaded end-to-end development, optimisation and maintenance of the core platform.",
+          title: "Batch processing",
+          text: "Developed Spring Batch jobs for card generation and embossing file creation, processing up to 10K cards per run.",
+        },
+        {
+          title: "Virtual cards & data maintenance",
+          text: "Implemented virtual card support and data maintenance services, integrated through Kafka events.",
+        },
+        {
+          title: "Performance",
+          text: "Optimized Oracle and PostgreSQL queries and Redis caching, reducing batch run time from 6 hours to 40 minutes.",
         },
         {
           title: "Requirements engineering",
-          text: "Ran requirement gathering and feature grooming with stakeholders to align delivery with business goals.",
-        },
-        {
-          title: "Quality",
-          text: "Enforced code-review standards and best practices for performant, maintainable, scalable code.",
-        },
-        {
-          title: "Problem solving & mentorship",
-          text: "Proposed solutions for complex business use cases and mentored engineers through hard problems.",
+          text: "Worked with stakeholders on requirement gathering and feature grooming in an Agile team.",
         },
       ],
       image: "/images/projects/debit-card.svg",

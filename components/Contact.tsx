@@ -15,7 +15,7 @@ export default function Contact() {
               Hiring for a Technical Lead, senior Java backend or blockchain role — or need help architecting a fintech
               platform? I&apos;d love to hear from you.
             </p>
-            <p>Available within 30 days · Open to relocate to the UAE (Dubai / Abu Dhabi) · Video interviews available</p>
+            <p className="text-lg leading-relaxed text-muted">Available within 30 days · Open to relocate to the UAE (Dubai / Abu Dhabi) · Video interviews available</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={`mailto:${profile.email}?subject=${encodeURIComponent("Opportunity for " + profile.name)}`}
